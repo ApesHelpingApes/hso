@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hso"
+version = "0.1.0"
+description = "Health Score Oscillator - open reference (non-proprietary)"
+authors = [{name="HSO Contributors"}]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["numpy", "pandas", "matplotlib"]
