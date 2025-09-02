@@ -83,13 +83,13 @@ sprezzarete
 ### SMAC (Simple Moving Average Composite)
 A weighted combination of price vs. MAs and MA vs. MA relationships where we represent each MA relationship as a sign function:
   
-$'  S_{i,j} = \text{sgn}(MA_i - MA_j), \quad S_{i,P} = \text{sgn}(P - MA_i)'$
+$S_{i,j} = \text{sgn}(MA_i - MA_j), \quad S_{i,P} = \text{sgn}(P - MA_i)$
 
 where
 
 the vector of MA signals be:
-  
-$'  \mathbf{s} =
+
+$\mathbf{s} =
   \begin{bmatrix}
   S_{10,P} \\
   S_{50,P} \\
@@ -101,11 +101,11 @@ $'  \mathbf{s} =
   S_{50,100} \\
   S_{50,200} \\
   S_{100,200}
-  \end{bmatrix}'$
+  \end{bmatrix}$
 
 the weight of MA signals be:
   
-$'  \mathbf{w} =
+$\mathbf{w} =
   \begin{bmatrix}
   W_{10,P} \\
   W_{50,P} \\
@@ -117,15 +117,15 @@ $'  \mathbf{w} =
   W_{50,100} \\
   W_{50,200} \\
   W_{100,200}
-  \end{bmatrix}'$
+  \end{bmatrix}$
 
 So the SMAC score is:
   
-$'  \text{SMAC} = \text{Norm}\big(\mathbf{w}^\top \mathbf{s}\big) \in [-3, 3]'$
+$\text{SMAC} = \text{Norm}\big(\mathbf{w}^\top \mathbf{s}\big) \in [-3, 3]$
 ---
 In summary:
   
-$'  \text{SMAC} = \text{Normalization}\Bigg(
+$\text{SMAC} = \text{Normalization}\Bigg(
   W_{10,P} \cdot \text{sgn}(P - MA_{10}) +
   W_{50,P} \cdot \text{sgn}(P - MA_{50}) +
   W_{100,P} \cdot \text{sgn}(P - MA_{100}) +
@@ -137,51 +137,51 @@ $'  \text{SMAC} = \text{Normalization}\Bigg(
   W_{50,200} \cdot \text{sgn}(MA_{50} - MA_{200}) +
   W_{100,200} \cdot \text{sgn}(MA_{100} - MA_{200})
   \Bigg)
-\in [-3, 3]'$
+\in [-3, 3]$
 
 ### MACD 5-day Signal Line Slope
-$'MACD5S_{sig} =
+$MACD5S_{sig} =
   \begin{cases}
   +1 & \text{if slope of MACD signal line over last 5 days} > 0 \\
   0 & \text{otherwise}
   \end{cases}
-\in \{0, 1\}'$
+\in \{0, 1\}$
 
 ### MACD 5-day Trend Line Slope
-$'MACD5S_{trend} =
+$MACD5S_{trend} =
   \begin{cases}
   +1 & \text{if slope of MACD trend line over last 5 days} > 0 \\
   0 & \text{otherwise}
   \end{cases}
-\in \{0, 1\}'$
+\in \{0, 1\}$
 
 ### RSI
-$'RSI =
+$RSI =
   \begin{cases}
   +0.5 & \text{if RSI < 30 (oversold)} \\
   -0.5 & \text{if RSI > 80 (overbought)} \\
   0 & \text{otherwise}
   \end{cases}
-\in \{-0.5, 0, +0.5\}'$
+\in \{-0.5, 0, +0.5\}$
 
 ### Bollinger Band
-$'BB =
+$BB =
   \begin{cases}
   +0.2 & \text{if Price < LowerBand (2σ breach)} \\
   -0.2 & \text{if Price > UpperBand (2σ breach)} \\
   0 & \text{otherwise}
   \end{cases}
-\in \{-0.2, 0, +0.2\}'$
+\in \{-0.2, 0, +0.2\}$
 
 ## Backtest
 Using an equal-weighted HSO, we run the following rules:
-
+```
 < 0: 100% SPY
 >= 0 && <= 4: X% UPRO, (100 - X) SPY
 > 4: Y% UPRO, (100 - Y) SPY
 
 where X > Y
-
+```
 
 
 **Non-proprietary reference implementation** of the HSO for research and education.
