@@ -217,7 +217,7 @@ where X > Y
 
 ### [QuantConnect](https://www.quantconnect.com)
 
-Here's the [backtest](backtest_spy_hso.pdf) ready to be copied into QuantConnect
+Here's the [backtest](backtest_SPY_HSO.pdf) ready to be copied into QuantConnect
 
 ```
 # QUANTCONNECT.COM - Democratizing Finance, Empowering Individuals.
