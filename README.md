@@ -197,7 +197,7 @@ What we do know is that:
 
 And picking a particular start date for a backtest exemplifies _timing the market_.
 
-Research does show that [lump-sum](https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf) investment strategies beat most cost averaging investment stratgies two-thrids of the time, so backtest does have some credibility, but again, results are subject to start date.
+Research does show that [lump-sum](https://corporate.vanguard.com/content/dam/corp/research/pdf/cost_averaging_invest_now_or_temporarily_hold_your_cash.pdf) investment strategies beat most cost averaging investment strategies two-thirds of the time, so backtest does have some credibility, but again, results are subject to start date.
 
 But realistically, most people most likely do not have a chunk of extra cash lying around doing nothing. Most people will be saving bit by bit, over many many years.
 
